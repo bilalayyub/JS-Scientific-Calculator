@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" name="calculator">
+        <!-- input-feild  -->
+        <!-- <div class="">
+            <button type="button">C</button>
+            <button type="button" id="showMore" onclick="showMore()">S.M</button>
+            <button type="button" onclick="showLess()">S.L</button>
+            <button type="button">/</button>
+            display.value = display.value.toString().slice(0,-1)
+        </div> -->
+        
+        <input type="text" id="display" readonly  placeholder="0" >
+            
+            <div class="table" id="numbers">
+                <button type="button" class="operator" onclick="display.value = display.value.toString().slice(0,-1)">C</button>
+                <button type="button" value="AC" class="operator" onclick="ac(); ">AC</button>
+               
+                <button type="button" id="showMore" class="operator" onclick="showMore()">More</button>
+                <button type="button" value="/" class="operator" onclick="operator('/') ">/</button>
+                <button type="button" value="7" onclick="btn(7) ">7</button>
+                <button type="button" value="8" onclick="btn(8)">8</button>
+                <button type="button" value="9" onclick="btn(9) ">9</button>
+                <button type="button" value="7" class="operator" onclick="operator('*')">*</button>
+                <button type="button" value="4" onclick="btn(4) ">4</button>
+                <button type="button" value="5" onclick="btn(5) ">5</button>
+                <button type="button" value="6" onclick="btn(6) ">6</button>
+                <button type="button" value="-" class="operator" onclick="operator('-')">-</button>
+                <button type="button" value="1" onclick="btn(1) ">1</button>
+                <button type="button" value="2" onclick="btn(2) ">2</button>
+                <button type="button" value="3" onclick="btn(3) ">3</button>
+                <button type="button" value="+" class="operator" onclick="operator('+')">+</button>
+                <button type="button" value="00" onclick="display.value += '00' ">00</button>
+                <button type="button" value="0" onclick="btn(0) ">0</button>
+                <button type="button" value="." onclick="operator('.') ">.</button>
+                <button type="button" value="=" onclick="result()">=</button>
+            </div>
+            <div class="table2" id="extra">
+                <button type="button" class="operator" onclick="showLess()">Back</button>
+
+                <button type="button" value="sin" onclick="sin()">sin</button>
+                <button type="button" value="cos" onclick="cos()">cos</button>
+                <button type="button" value="tan" onclick="tan()">tan</button>
+                <button type="button" value="log" onclick="log()">log</button>
+                <button type="button" value="exp" onclick="exp()">e</button>
+                <button type="button" value="x^2" onclick="square()">x <sup>2</sup></button>
+                <button type="button" value="x^3" onclick="cubed()">x <sup>3</sup></button>
+                <button type="button" value="sqrt2" onclick="sqrt2()"> &radic;</button>
+                <button type="button" value="sqrt3" onclick="sqrt3()">&#8731;</button>
+                <button type="button" value="%" onclick="operator('%') ">%</button>
+                <button type="button" class="operator" onclick="operator('*')">*</button>
+                <button type="button" class="operator" onclick="operator('/')">/</button>
+                <button type="button" class="operator" onclick="operator('-')">-</button>
+                <button type="button" class="operator" onclick="operator('+')">+</button>
+                <button type="button" value="=" onclick="result()">=</button>
+            </div>
+             
+       
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
